@@ -1,0 +1,16 @@
+Object Oriented Programming
+
+- Real world actors : Visulize them as entities (data) in the software - Objects
+    - def name = 'mehul chopra' - String object
+    - def age = 32 - Integer object
+    - def pi = 3.14 - BigDecimal object
+    - def lightsOn = true - Boolean object
+
+    - Class
+        - Entity using which objects can be created in the system: 1 to n
+        - It gives a data type to an object
+        - Blueprint for an object
+- Characteristics of real world actors : Visualize them as attributes of the Object
+    - Declare the attributes in the class
+
+- Actions on real world actors : functions called on the Object
