@@ -9,11 +9,14 @@ package xyz.supercoders.college.domain
     // attributes (class attributes)
     // attributes get shared amongst all the objects of the Student class
     // common shareable area of the memory
-class Student {
+
+// Student IS-A CollegeUser
+// Student child class of the parent class CollegeUser
+// Student concrete class - CollegeUser base class
+// Student -> CollegeUser -> Object (Multilevel inheritance)
+class Student extends CollegeUser {
 
     // instance (object) attributes
-    String name
-    Character gender
     Integer roll
     Float marks
 
@@ -52,33 +55,6 @@ class Student {
         }
     }
 
-    def setGender(Character gender) {
-        if (gender == 'm' || gender == 'f') {
-            this.gender = gender;
-        } else {
-            this.gender = null;
-        }
-    }
-
-    // getter methods, we get by default in groovy bean for every attribute of the object
-    /* def getName() {
-        this.name
-    } */
-
-    def getName() {
-        // ?. null safe object navigation operator
-        this.name?.toUpperCase()
-    }
-
-    String getDetails() {
-        // this becomes an implicit variable
-        // this current object
-        // println this
-
-        // does not use getName()
-        "Name: ${this.name}\nGender: ${this.gender}\nRoll: ${this.roll}\nMarks: ${this.marks}"
-    }
-
     // instance method
     Character getGrade() {
         switch(this.marks) {
@@ -92,6 +68,12 @@ class Student {
                 break
             default: 'I'
         }
+    }
+
+    // redefines the super class method in its own class
+    // Method overriding
+    String getDetails() {
+        "${super.getDetails()}Roll: ${this.roll}"    
     }
 
     // static method
