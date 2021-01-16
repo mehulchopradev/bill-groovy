@@ -1,0 +1,5 @@
+JVM -> play_input -> nextInt() -> keyboard(5) -> 5 -> play_input
+
+JVM -> play_input -> nextInt() -> keyboard('mehul') -> throws InputMismatchException -> play_input -> auto rethrow to its caller -> JVM
+
+JVM -> play_input -> nextInt() -> keyboard('mehul') -> throws InputMismatchException -> play_input (handle it)

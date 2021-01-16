@@ -14,7 +14,7 @@ package xyz.supercoders.college.domain
 // Student child class of the parent class CollegeUser
 // Student concrete class - CollegeUser base class
 // Student -> CollegeUser -> Object (Multilevel inheritance)
-class Student extends CollegeUser {
+final class Student extends CollegeUser {
 
     // instance (object) attributes
     Integer roll

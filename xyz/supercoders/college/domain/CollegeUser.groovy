@@ -1,7 +1,7 @@
 package xyz.supercoders.college.domain
 
 // CollegeUser -> Object (Single inheritance)
-class CollegeUser extends Object { // every class implicitly inherits from the class Object (java.lang)
+abstract class CollegeUser extends Object { // every class implicitly inherits from the class Object (java.lang)
     String name
     Character gender
 
@@ -18,7 +18,9 @@ class CollegeUser extends Object { // every class implicitly inherits from the c
         this.name
     } */
 
-    def getName() {
+    // the method cannot be overriden further in the sub classes
+    // but is definitely inherited
+    final def getName() {
         // ?. null safe object navigation operator
         this.name?.toUpperCase()
     }
