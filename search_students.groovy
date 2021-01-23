@@ -7,6 +7,9 @@ def studentList = [
     new Student('bill', 'm' as Character, 20, 99)
 ]
 
+def names = studentList*.name
+println names
+
 // index
 /* def smap = [
     10: studentList[0],

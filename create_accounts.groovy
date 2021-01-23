@@ -4,6 +4,9 @@ import xyz.supercoders.bank.exceptions.MinBalNotMaintainedException
 def a1 = new Account(accNumber: 'A00123', accType: 'Savings', accBalance: 10_000)
 // println(a1.deposit 2_000)
 
+def prop = 'accNumber'
+println a1[prop]
+
 println(a1 + 2_000) // operator overloading
 // Internally
 // println(a1.plus(2_000))
